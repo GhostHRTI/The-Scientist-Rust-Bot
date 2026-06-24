@@ -15,10 +15,3 @@ This folder contains a static GitHub Pages documentation site for **The Scientis
 - `docs/roadmap.html` — development roadmap
 - `.github/workflows/pages.yml` — GitHub Pages deployment workflow
 
-## How to use
-
-Copy these files into the root of your GitHub repository. Then go to:
-
-`Settings → Pages → Build and deployment → Source → GitHub Actions`
-
-Push to `main`. GitHub Actions will deploy the site.
