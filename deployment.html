@@ -1,0 +1,7 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Deployment — The Scientist</title><link rel="stylesheet" href="../styles.css"></head><body><header class="site-header"><nav class="nav"><a class="brand" href="../">The Scientist</a><div class="nav-links"><a href="./">Docs</a><a href="setup.html">Setup</a><a href="modules.html">Modules</a><a href="security.html">Security</a></div></nav></header><main class="docs-layout"><aside class="sidebar"><a href="./">Overview</a><a href="setup.html">Setup Guide</a><a href="commands.html">Commands</a><a href="modules.html">Modules</a><a href="providers.html">Provider Integrations</a><a href="security.html">Security</a><a href="deployment.html">Deployment</a><a href="roadmap.html">Roadmap</a></aside><article class="doc-content"><p class="eyebrow">Deployment</p><h1>Deployment Guide</h1><h2>Docker Compose</h2><pre class="code-block"><code>docker compose up -d --build
+npx prisma migrate deploy
+npm run deploy:commands</code></pre><h2>PM2</h2><pre class="code-block"><code>npm ci
+npm run build
+npx prisma migrate deploy
+pm2 start dist/index.js --name the-scientist
+pm2 save</code></pre><h2>Production Checklist</h2><ul><li>Enable backups for PostgreSQL.</li><li>Use Redis persistence only where needed.</li><li>Set restart policy for the bot process.</li><li>Configure alert channel for crashes and failed provider jobs.</li><li>Run a permissions audit before public launch.</li></ul></article></main></body></html>
